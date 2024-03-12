@@ -1,0 +1,9 @@
+.container {
+    padding: 0 4rem;
+}
+* {
+    outline: none;
+}
+.carousel .swiper-wrapper {
+    transition-timing-function: linear;
+}
