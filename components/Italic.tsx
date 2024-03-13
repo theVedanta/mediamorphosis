@@ -3,7 +3,13 @@ import { ReactNode } from "react";
 
 const Italic = ({ children }: { children: ReactNode }) => {
     return (
-        <Text fontFamily="serif" color="red" display="inline" fontSize="5rem">
+        <Text
+            className="italic"
+            fontFamily="serif"
+            color="red"
+            display="inline"
+            fontSize={{ base: "2.6rem", sm: "5rem" }}
+        >
             <i>{children}</i>
         </Text>
     );

@@ -22,7 +22,8 @@ const theme = extendTheme({
                     borderRadius: "10px",
                     color: "white",
                     fontWeight: 400,
-                    px: 10,
+                    px: { base: 6, sm: 10 },
+                    fontSize: { base: "1rem", sm: "1.2rem" },
                     _hover: {
                         background: "red",
                         color: "black",
@@ -33,6 +34,7 @@ const theme = extendTheme({
 
         Heading: defineStyle({
             fontWeight: 400,
+            lineHeight: "-100px",
         }),
     },
     styles: {

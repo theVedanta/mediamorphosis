@@ -108,6 +108,7 @@ const Footer = () => {
                                 mx={2}
                                 borderRadius="50%"
                                 p={2}
+                                px="0 !important"
                                 border="1px solid"
                                 borderColor="white"
                                 _hover={{ bg: "white", color: "black" }}

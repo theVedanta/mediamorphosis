@@ -25,7 +25,7 @@ const Nav = () => {
                 />
             </Link>
 
-            <Flex>
+            <Flex display={{ base: "none", sm: "flex" }}>
                 {links.map((link, i) => (
                     <Link href={link.href} key={i}>
                         <Text _hover={{ color: "red" }} px={10}>

@@ -30,7 +30,12 @@ const Carousel = () => {
                             justifyContent="space-between"
                             alignItems="center"
                         >
-                            <Heading width="70%" noOfLines={2} fontWeight={600}>
+                            <Heading
+                                letterSpacing="0"
+                                width="70%"
+                                noOfLines={2}
+                                fontWeight={600}
+                            >
                                 Data Analytics
                             </Heading>
 

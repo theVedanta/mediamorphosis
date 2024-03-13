@@ -3,7 +3,22 @@
 }
 * {
     outline: none;
+    letter-spacing: -0.4px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -2.6px;
 }
 .carousel .swiper-wrapper {
     transition-timing-function: linear;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.4rem;
+    }
 }

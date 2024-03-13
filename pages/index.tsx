@@ -34,8 +34,8 @@ export default function Home() {
                         position="relative"
                         width="100%"
                         height="100%"
-                        px={20}
-                        py={32}
+                        px={{ base: 6, sm: 20 }}
+                        py={{ base: 6, sm: 32 }}
                     >
                         <Image
                             style={{
@@ -50,20 +50,27 @@ export default function Home() {
                             src="/assets/hero.gif"
                             alt="background"
                             loading="eager"
+                            objectFit="cover"
                         ></Image>
 
                         <Box
-                            p={10}
+                            pl={{ base: 4, sm: 8 }}
+                            pt={{ base: 4, sm: 8 }}
                             bg="black"
                             position="absolute"
                             bottom={0}
                             right={0}
-                            w="40vw"
-                            h="36vh"
+                            w={{ base: "72vw", sm: "40vw" }}
                             borderRadius="20px 0 0 0"
                         >
-                            <Box bg="gray" p={10} borderRadius="20px 0 0 20px">
-                                <Text fontSize="large">
+                            <Box
+                                bg="gray"
+                                p={{ base: 4, sm: 8 }}
+                                borderRadius="20px 0 0 20px"
+                            >
+                                <Text
+                                    fontSize={{ base: "0.7rem", sm: "large" }}
+                                >
                                     A Full-Service Technology Powerhouse in NYC
                                     with a Rich Advertising Heritage.
                                     Specializing in crafting innovative software
@@ -79,23 +86,37 @@ export default function Home() {
                             </Box>
                         </Box>
 
-                        <Box w="60%">
-                            <Heading size="4xl" fontWeight={500}>
+                        <Box
+                            w={{ base: "100%", sm: "60%" }}
+                            h="100%"
+                            mt={{ base: 10, sm: 0 }}
+                        >
+                            <Heading
+                                size={{ base: "xl", sm: "4xl" }}
+                                fontWeight={500}
+                            >
                                 <Italic>Digital Innovation</Italic>
                                 &nbsp;at the crossroads of cultures.
                             </Heading>
-                            <Text fontSize="xl" marginTop={6} w="70%">
+                            <Text
+                                fontSize={{ base: "sm", sm: "xl" }}
+                                mt={{ base: 3, sm: 6 }}
+                                w={{ base: "100%", sm: "70%" }}
+                            >
                                 Fueling Customer Engagement Through Data-Driven
                                 Digital Solutions, Harnessing Analytics for
                                 Unparalleled Viral Growth
                             </Text>
                             <Link href="/">
-                                <Button mt={14}>Get Started</Button>
+                                <Button mt={{ base: 6, sm: 14 }}>
+                                    Get Started
+                                </Button>
                             </Link>
                         </Box>
                     </Box>
                 </Box>
 
+                {/* 
                 <Flex
                     className="container"
                     alignItems="center"
@@ -103,6 +124,7 @@ export default function Home() {
                     h="200vh"
                     position="relative"
                     direction="column"
+                    mt={32}
                 >
                     <Heading mt="47vh" w="75%" fontSize="4rem" fontWeight={300}>
                         We craft <Italic>web</Italic> and{" "}
@@ -135,6 +157,8 @@ export default function Home() {
                     textAlign="center"
                     h="70vh"
                     position="relative"
+                    my={32}
+                    mt={60}
                 >
                     <Heading w="75%" fontSize="4rem" fontWeight={300}>
                         Harnessing <Italic>AI</Italic> and{" "}
@@ -166,17 +190,20 @@ export default function Home() {
                     w="100%"
                     h="80vh"
                     flexDirection="column"
+                    mt={10}
                 >
                     <Image
-                        src="/assets/human.png"
+                        src="/assets/human.gif"
                         alt="human"
                         loading="eager"
                         fill
+                        objectFit="cover"
                         style={{
                             position: "absolute",
                             top: 0,
                             left: 0,
                             zIndex: -1,
+                            filter: "brightness(40%)",
                         }}
                     />
 
@@ -212,7 +239,7 @@ export default function Home() {
                     <Box
                         w="100%"
                         h="100vh"
-                        transform="translateX(-3%)"
+                        transform="translateX(-4%)"
                         overflow="hidden"
                     >
                         <ComposableMap
@@ -263,7 +290,8 @@ export default function Home() {
                         </Flex>
                     </Box>
                 </Flex>
-                <Consultation />
+
+                <Consultation /> */}
             </main>
         </>
     );
