@@ -6,6 +6,8 @@ import Consultation from "@/components/Consultation";
 import Italic from "@/components/Italic";
 import { MapPin } from "react-feather";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import craft from "../public/assets/craft.svg";
+import harness from "../public/assets/harness.svg";
 import Carousel from "@/components/Carousel";
 import SlimHeading from "@/components/SlimHeading";
 
@@ -130,8 +132,8 @@ export default function Home() {
                     </Link>
 
                     <Image
-                        src="/assets/craft.svg"
-                        alt="harness"
+                        src={craft}
+                        alt="craft"
                         fill
                         style={{
                             position: "absolute",
@@ -139,7 +141,6 @@ export default function Home() {
                             left: 0,
                             zIndex: -1,
                         }}
-                        loading="eager"
                     />
                 </Flex>
 
@@ -160,9 +161,8 @@ export default function Home() {
                     </SlimHeading>
 
                     <Image
-                        src="/assets/harness.svg"
+                        src={harness}
                         alt="harness"
-                        loading="eager"
                         fill
                         style={{
                             position: "absolute",
@@ -188,7 +188,6 @@ export default function Home() {
                     <Image
                         src="/assets/human.gif"
                         alt="human"
-                        loading="eager"
                         fill
                         objectFit="cover"
                         style={{
@@ -251,7 +250,7 @@ export default function Home() {
                                 fill="#333"
                                 strokeWidth="1px"
                             >
-                                <Geographies geography="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json">
+                                <Geographies geography="/world.json">
                                     {({ geographies }: { geographies: any }) =>
                                         geographies.map((geo: any) => (
                                             <Geography
@@ -277,6 +276,7 @@ export default function Home() {
                     justifyContent="center"
                     position="relative"
                     py={{ base: 10, sm: 20 }}
+                    my={{ base: 2, sm: 20 }}
                 >
                     <Image
                         style={{
@@ -285,13 +285,12 @@ export default function Home() {
                             top: 0,
                             left: 0,
                             borderRadius: "30px",
-                            filter: "brightness(20%)",
+                            filter: "brightness(15%)",
                             objectFit: "cover",
                         }}
                         fill
                         src="/assets/acc.jpg"
                         alt="background"
-                        loading="eager"
                     ></Image>
 
                     <Box w="90%">
