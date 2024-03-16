@@ -55,7 +55,7 @@ export default function Home() {
                             autoPlay
                             preload="auto"
                         >
-                            <source src="/assets/hero.webm" type="video/webm" />
+                            <source src="/assets/hero.mp4" type="video/mp4" />
                         </video>
 
                         <Box
@@ -203,7 +203,7 @@ export default function Home() {
                             objectFit: "cover",
                         }}
                     >
-                        <source src="/assets/human.webm" type="video/webm" />
+                        <source src="/assets/human.mp4" type="video/mp4" />
                     </video>
 
                     <SlimHeading
