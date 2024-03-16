@@ -40,7 +40,7 @@ export default function Home() {
                         px={{ base: 6, sm: 20 }}
                         py={{ base: 6, sm: 32 }}
                     >
-                        <Image
+                        <video
                             style={{
                                 position: "absolute",
                                 zIndex: -1,
@@ -49,12 +49,12 @@ export default function Home() {
                                 borderRadius: "30px",
                                 filter: "brightness(40%)",
                                 objectFit: "cover",
+                                width: "100%",
+                                height: "100%",
                             }}
-                            fill
-                            src="/assets/hero.gif"
-                            alt="background"
-                            loading="eager"
-                        ></Image>
+                            autoPlay
+                            src="/assets/hero.mp4"
+                        ></video>
 
                         <Box
                             pl={{ base: 4, sm: 8 }}
@@ -135,6 +135,7 @@ export default function Home() {
                         src={craft}
                         alt="craft"
                         fill
+                        loading="eager"
                         style={{
                             position: "absolute",
                             top: 0,
@@ -164,6 +165,7 @@ export default function Home() {
                         src={harness}
                         alt="harness"
                         fill
+                        loading="eager"
                         style={{
                             position: "absolute",
                             top: 0,
@@ -185,19 +187,20 @@ export default function Home() {
                     flexDirection="column"
                     mt={{ base: 14, sm: 20 }}
                 >
-                    <Image
-                        src="/assets/human.gif"
-                        alt="human"
-                        fill
-                        objectFit="cover"
+                    <video
+                        src="/assets/human.mp4"
+                        autoPlay
                         style={{
                             position: "absolute",
                             top: 0,
                             left: 0,
                             zIndex: -1,
                             filter: "brightness(40%)",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
                         }}
-                    />
+                    ></video>
 
                     <SlimHeading
                         display="flex"
@@ -289,6 +292,7 @@ export default function Home() {
                             objectFit: "cover",
                         }}
                         fill
+                        loading="eager"
                         src="/assets/acc.jpg"
                         alt="background"
                     ></Image>
