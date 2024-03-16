@@ -8,18 +8,18 @@ const Footer = () => {
         {
             name: "Twitter",
             href: "/",
-            icon: <Twitter />,
+            icon: <Twitter width="inherit" />,
         },
         {
             name: "Twitter",
             href: "/",
-            icon: <Twitter />,
+            icon: <Twitter width="inherit" />,
         },
 
         {
             name: "Twitter",
             href: "/",
-            icon: <Twitter />,
+            icon: <Twitter width="inherit" />,
         },
     ];
 
@@ -77,11 +77,6 @@ const Footer = () => {
             name: "Blog",
             href: "/blog",
         },
-
-        {
-            name: "Services",
-            href: "/services",
-        },
     ];
 
     return (
@@ -97,7 +92,7 @@ const Footer = () => {
                 <Image
                     src="/assets/logo.svg"
                     alt="logo"
-                    width={400}
+                    width={300}
                     height={200}
                     style={{ marginBottom: "3rem" }}
                 />
@@ -105,30 +100,51 @@ const Footer = () => {
                     {socials.map((social, i) => (
                         <Link key={i} href={social.href}>
                             <Button
-                                mx={2}
+                                mx={{ base: "3px", sm: 2 }}
                                 borderRadius="50%"
-                                p={2}
-                                px="0 !important"
                                 border="1px solid"
                                 borderColor="white"
                                 _hover={{ bg: "white", color: "black" }}
+                                minW={{ base: "40px", sm: "55px" }}
+                                h={{ base: "40px", sm: "55px" }}
+                                padding={{ base: "0 !important" }}
                             >
-                                {social.icon}
+                                <Text w={{ base: "1.2rem", sm: "1.6rem" }}>
+                                    {social.icon}
+                                </Text>
                             </Button>
                         </Link>
                     ))}
                 </Flex>
 
-                <Text position="absolute" bottom={0} left={0}>
+                <Text
+                    position="absolute"
+                    bottom={0}
+                    left={0}
+                    fontSize={{ base: 12, sm: 20 }}
+                    w={{ base: "200%", sm: "100%" }}
+                    textAlign={{ base: "center", sm: "left" }}
+                >
                     Copyright © Media Morphosis 2024 All Rights Reserved.
                 </Text>
             </Box>
 
-            <Flex w="50%" justifyContent="space-around" pt={20}>
+            <Flex
+                w="50%"
+                pt={{ base: 0, sm: 20 }}
+                h="100%"
+                direction={{ base: "column", sm: "row" }}
+                alignItems="flex-start"
+                pl={{ base: 14, sm: 0 }}
+                justifyContent={{ base: "flex-start", sm: "space-around" }}
+            >
                 <Box>
                     {linkBox1.map((link) => (
                         <Link href={link.href} key={link.name}>
-                            <Text fontSize={22} lineHeight={1.4}>
+                            <Text
+                                fontSize={{ base: 14, sm: 22 }}
+                                lineHeight={1.6}
+                            >
                                 {link.name}
                             </Text>
                         </Link>
@@ -137,7 +153,10 @@ const Footer = () => {
                 <Box>
                     {linkBox2.map((link) => (
                         <Link href={link.href} key={link.name}>
-                            <Text fontSize={22} lineHeight={1.4}>
+                            <Text
+                                fontSize={{ base: 14, sm: 22 }}
+                                lineHeight={1.6}
+                            >
                                 {link.name}
                             </Text>
                         </Link>
@@ -146,7 +165,10 @@ const Footer = () => {
                 <Box>
                     {linkBox3.map((link) => (
                         <Link href={link.href} key={link.name}>
-                            <Text fontSize={22} lineHeight={1.4}>
+                            <Text
+                                fontSize={{ base: 14, sm: 22 }}
+                                lineHeight={1.6}
+                            >
                                 {link.name}
                             </Text>
                         </Link>

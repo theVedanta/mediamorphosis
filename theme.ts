@@ -1,4 +1,4 @@
-import { Button, color, defineStyle, extendTheme } from "@chakra-ui/react";
+import { defineStyle, extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
     fonts: {
@@ -18,12 +18,14 @@ const theme = extendTheme({
             variants: {
                 outline: {
                     border: "2px solid",
-                    borderColor: "red",
+                    borderColor: { base: "red", sm: "red" },
                     borderRadius: "10px",
                     color: "white",
                     fontWeight: 400,
-                    px: { base: 6, sm: 10 },
-                    fontSize: { base: "1rem", sm: "1.2rem" },
+                    px: { base: 4, sm: 7 },
+                    py: { base: 2, sm: 3 },
+                    height: "auto",
+                    fontSize: { base: "0.9rem", sm: "1.2rem" },
                     _hover: {
                         background: "red",
                         color: "black",
@@ -34,7 +36,6 @@ const theme = extendTheme({
 
         Heading: defineStyle({
             fontWeight: 400,
-            lineHeight: "-100px",
         }),
     },
     styles: {

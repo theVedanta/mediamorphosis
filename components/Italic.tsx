@@ -8,9 +8,12 @@ const Italic = ({ children }: { children: ReactNode }) => {
             fontFamily="serif"
             color="red"
             display="inline"
-            fontSize={{ base: "2.6rem", sm: "5rem" }}
+            fontSize={{ base: "2.2rem", sm: "5rem" }}
+            fontWeight={300}
+            noOfLines={1}
+            style={{ display: "inline !important" }}
         >
-            <i>{children}</i>
+            <i style={{ display: "inline !important" }}>{children}</i>
         </Text>
     );
 };

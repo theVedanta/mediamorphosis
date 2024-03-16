@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import Consultation from "@/components/Consultation";
@@ -7,6 +7,7 @@ import Italic from "@/components/Italic";
 import { MapPin } from "react-feather";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import Carousel from "@/components/Carousel";
+import SlimHeading from "@/components/SlimHeading";
 
 export default function Home() {
     return (
@@ -45,12 +46,12 @@ export default function Home() {
                                 left: 0,
                                 borderRadius: "30px",
                                 filter: "brightness(40%)",
+                                objectFit: "cover",
                             }}
                             fill
                             src="/assets/hero.gif"
                             alt="background"
                             loading="eager"
-                            objectFit="cover"
                         ></Image>
 
                         <Box
@@ -86,22 +87,15 @@ export default function Home() {
                             </Box>
                         </Box>
 
-                        <Box
-                            w={{ base: "100%", sm: "60%" }}
-                            h="100%"
-                            mt={{ base: 10, sm: 0 }}
-                        >
-                            <Heading
-                                size={{ base: "xl", sm: "4xl" }}
-                                fontWeight={500}
-                            >
-                                <Italic>Digital Innovation</Italic>
-                                &nbsp;at the crossroads of cultures.
-                            </Heading>
+                        <Box h="100%" mt={{ base: 10, sm: 0 }}>
+                            <SlimHeading fontWeight={500}>
+                                <Italic>Digital Innovation&nbsp;</Italic>
+                                at the crossroads of cultures.
+                            </SlimHeading>
                             <Text
                                 fontSize={{ base: "sm", sm: "xl" }}
                                 mt={{ base: 3, sm: 6 }}
-                                w={{ base: "100%", sm: "70%" }}
+                                w={{ base: "100%", sm: "36%" }}
                             >
                                 Fueling Customer Engagement Through Data-Driven
                                 Digital Solutions, Harnessing Analytics for
@@ -116,21 +110,20 @@ export default function Home() {
                     </Box>
                 </Box>
 
-                {/* 
                 <Flex
                     className="container"
                     alignItems="center"
                     textAlign="center"
-                    h="200vh"
+                    h={{ base: "60vh", sm: "200vh" }}
                     position="relative"
                     direction="column"
-                    mt={32}
+                    mt={{ base: 10, sm: 32 }}
                 >
-                    <Heading mt="47vh" w="75%" fontSize="4rem" fontWeight={300}>
+                    <SlimHeading mt={{ base: 20, sm: "47vh" }}>
                         We craft <Italic>web</Italic> and{" "}
                         <Italic>app experiences</Italic> for user to explore and
                         share, blending artful design with functionality.
-                    </Heading>
+                    </SlimHeading>
 
                     <Link href="/">
                         <Button mt={10}>View our work</Button>
@@ -155,16 +148,16 @@ export default function Home() {
                     justifyContent="center"
                     alignItems="center"
                     textAlign="center"
-                    h="70vh"
+                    h={{ base: "50vh", sm: "70vh" }}
                     position="relative"
-                    my={32}
-                    mt={60}
+                    my={{ base: 0, sm: 32 }}
+                    mt={{ base: 0, sm: 60 }}
                 >
-                    <Heading w="75%" fontSize="4rem" fontWeight={300}>
+                    <SlimHeading>
                         Harnessing <Italic>AI</Italic> and{" "}
                         <Italic>data analytics</Italic> to develop software that
                         predict and enhance consumer engagement.
-                    </Heading>
+                    </SlimHeading>
 
                     <Image
                         src="/assets/harness.svg"
@@ -188,9 +181,9 @@ export default function Home() {
                     textAlign="center"
                     position="relative"
                     w="100%"
-                    h="80vh"
+                    h={{ base: "60vh", sm: "80vh" }}
                     flexDirection="column"
-                    mt={10}
+                    mt={{ base: 14, sm: 20 }}
                 >
                     <Image
                         src="/assets/human.gif"
@@ -207,30 +200,36 @@ export default function Home() {
                         }}
                     />
 
-                    <Heading display="flex" alignItems="center" mb={10}>
-                        <Text color="red" fontSize={64}>
-                            <MapPin size={44} />
-                        </Text>
+                    <SlimHeading
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        mb={10}
+                    >
+                        <Icon
+                            boxSize={{ base: "1.6rem", sm: "3rem" }}
+                            as={MapPin}
+                            color="red"
+                        />
                         &nbsp;&nbsp;New York City
-                    </Heading>
+                    </SlimHeading>
 
-                    <Heading w="70%" size="4xl" fontWeight={400}>
+                    <SlimHeading fontWeight={400}>
                         We build <Italic>human connections</Italic> through
                         meaningful engagement.
-                    </Heading>
+                    </SlimHeading>
                 </Flex>
 
                 <Flex
-                    className="container"
                     direction="column"
                     alignItems="center"
                     justifyContent="center"
                     textAlign="center"
-                    my={32}
+                    my={{ base: 10, sm: 32 }}
                 >
-                    <Heading fontWeight={400} fontSize={44}>
+                    <SlimHeading>
                         We build products for a global audience
-                    </Heading>
+                    </SlimHeading>
                     <Text fontSize={20} mt={10}>
                         Embracing Diversity: Connecting with Cultures Across the
                         Globe
@@ -238,44 +237,79 @@ export default function Home() {
 
                     <Box
                         w="100%"
-                        h="100vh"
-                        transform="translateX(-4%)"
+                        h={{ base: "60vh", sm: "100vh" }}
                         overflow="hidden"
                     >
-                        <ComposableMap
-                            stroke="#111"
-                            fill="#333"
-                            strokeWidth="1px"
+                        <Box
+                            transform={{
+                                base: "scale(2) translateY(20%)",
+                                sm: "scale(1) translateX(-4%)",
+                            }}
                         >
-                            <Geographies geography="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json">
-                                {({ geographies }: { geographies: any }) =>
-                                    geographies.map((geo: any) => (
-                                        <Geography
-                                            style={{
-                                                hover: {
-                                                    fill: "#eee",
-                                                    transition: "all 0.2s",
-                                                },
-                                            }}
-                                            key={geo.rsmKey}
-                                            geography={geo}
-                                        />
-                                    ))
-                                }
-                            </Geographies>
-                        </ComposableMap>
+                            <ComposableMap
+                                stroke="#111"
+                                fill="#333"
+                                strokeWidth="1px"
+                            >
+                                <Geographies geography="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json">
+                                    {({ geographies }: { geographies: any }) =>
+                                        geographies.map((geo: any) => (
+                                            <Geography
+                                                style={{
+                                                    hover: {
+                                                        fill: "#eee",
+                                                        transition: "all 0.2s",
+                                                    },
+                                                }}
+                                                key={geo.rsmKey}
+                                                geography={geo}
+                                            />
+                                        ))
+                                    }
+                                </Geographies>
+                            </ComposableMap>
+                        </Box>
                     </Box>
                 </Flex>
 
-                <Flex className="container" justifyContent="center">
+                <Flex
+                    className="container"
+                    justifyContent="center"
+                    position="relative"
+                    py={{ base: 10, sm: 20 }}
+                >
+                    <Image
+                        style={{
+                            position: "absolute",
+                            zIndex: -1,
+                            top: 0,
+                            left: 0,
+                            borderRadius: "30px",
+                            filter: "brightness(20%)",
+                            objectFit: "cover",
+                        }}
+                        fill
+                        src="/assets/acc.jpg"
+                        alt="background"
+                        loading="eager"
+                    ></Image>
+
                     <Box w="90%">
-                        <Heading fontWeight={400} fontSize="4rem" mb={10}>
+                        <SlimHeading
+                            mb={10}
+                            w="100%"
+                            textAlign={{ base: "center", sm: "left" }}
+                        >
                             Our Accreditations
-                        </Heading>
+                        </SlimHeading>
 
                         <Flex
                             alignItems="center"
-                            justifyContent="space-between"
+                            justifyContent={{
+                                base: "center",
+                                sm: "space-between",
+                            }}
+                            wrap={{ base: "wrap", sm: "nowrap" }}
                         >
                             {[1, 2, 3, 4, 5].map((i) => (
                                 <Image
@@ -291,7 +325,7 @@ export default function Home() {
                     </Box>
                 </Flex>
 
-                <Consultation /> */}
+                <Consultation />
             </main>
         </>
     );

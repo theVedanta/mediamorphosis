@@ -5,13 +5,9 @@
     outline: none;
     letter-spacing: -0.4px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    letter-spacing: -2.6px;
+main {
+    width: 100vw;
+    overflow: hidden;
 }
 .carousel .swiper-wrapper {
     transition-timing-function: linear;
