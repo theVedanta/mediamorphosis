@@ -53,7 +53,7 @@ export default function Home() {
                                 height: "100%",
                             }}
                             autoPlay
-                            src="/assets/hero.mp4"
+                            src="/assets/hero.webm"
                         ></video>
 
                         <Box
@@ -188,7 +188,7 @@ export default function Home() {
                     mt={{ base: 14, sm: 20 }}
                 >
                     <video
-                        src="/assets/human.mp4"
+                        src="/assets/human.webm"
                         autoPlay
                         style={{
                             position: "absolute",
