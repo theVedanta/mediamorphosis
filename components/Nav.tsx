@@ -18,7 +18,7 @@ import Link from "next/link";
 import { useRef } from "react";
 
 const Nav = () => {
-    const btnRef = useRef();
+    const btnRef = useRef(null);
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
@@ -49,6 +49,7 @@ const Nav = () => {
                     ref={btnRef}
                     colorScheme="teal"
                     onClick={onOpen}
+                    aria-label="Hamburger button"
                 >
                     <HamburgerIcon />
                 </IconButton>
