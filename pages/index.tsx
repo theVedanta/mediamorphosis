@@ -53,8 +53,10 @@ export default function Home() {
                                 height: "100%",
                             }}
                             autoPlay
-                            src="/assets/hero.webm"
-                        ></video>
+                            preload="auto"
+                        >
+                            <source src="/assets/hero.webm" type="video/webm" />
+                        </video>
 
                         <Box
                             pl={{ base: 4, sm: 8 }}
@@ -188,8 +190,8 @@ export default function Home() {
                     mt={{ base: 14, sm: 20 }}
                 >
                     <video
-                        src="/assets/human.webm"
                         autoPlay
+                        preload="auto"
                         style={{
                             position: "absolute",
                             top: 0,
@@ -200,7 +202,9 @@ export default function Home() {
                             height: "100%",
                             objectFit: "cover",
                         }}
-                    ></video>
+                    >
+                        <source src="/assets/human.webm" type="video/webm" />
+                    </video>
 
                     <SlimHeading
                         display="flex"
