@@ -5,7 +5,9 @@
     outline: none;
     letter-spacing: -0.4px;
 }
-main {
+main,
+body,
+#__next {
     width: 100vw;
     overflow: hidden;
 }

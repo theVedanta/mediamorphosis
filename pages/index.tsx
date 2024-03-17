@@ -89,6 +89,7 @@ export default function Home() {
                             >
                                 <Text
                                     fontSize={{ base: "0.7rem", sm: "large" }}
+                                    textAlign="justify"
                                 >
                                     A Full-Service Technology Powerhouse in NYC
                                     with a Rich Advertising Heritage.
@@ -329,11 +330,9 @@ export default function Home() {
 
                         <Flex
                             alignItems="center"
-                            justifyContent={{
-                                base: "center",
-                                sm: "space-between",
-                            }}
-                            wrap={{ base: "wrap", sm: "nowrap" }}
+                            justifyContent="center"
+                            wrap="wrap"
+                            gap={20}
                         >
                             {[1, 2, 3, 4, 5].map((i) => (
                                 <Image

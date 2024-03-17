@@ -12,7 +12,7 @@ const Consultation = () => {
         >
             <Flex
                 direction="column"
-                py={{ base: 12, sm: 32 }}
+                py={{ base: 12, sm: 28 }}
                 bg="gray"
                 rounded={{ base: 0, sm: 10 }}
                 w={{ base: "100%", sm: "90%" }}
@@ -28,7 +28,7 @@ const Consultation = () => {
                 <Link href="mailto:info@mediamorphosisinc.com">
                     <SlimHeading
                         _hover={{ textDecoration: "underline" }}
-                        my={8}
+                        my={4}
                         color="red"
                         w="100%"
                         textAlign="center"

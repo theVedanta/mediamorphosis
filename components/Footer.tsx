@@ -1,25 +1,22 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { Twitter } from "react-feather";
+import { Facebook, Linkedin, Twitter } from "react-feather";
 
 const Footer = () => {
     const socials = [
         {
-            name: "Twitter",
-            href: "/",
-            icon: <Twitter width="inherit" />,
+            href: "https://www.facebook.com/MediaMorphosis1/",
+            icon: <Facebook width="inherit" />,
         },
         {
-            name: "Twitter",
-            href: "/",
+            href: "https://twitter.com/media_morphosis",
             icon: <Twitter width="inherit" />,
         },
 
         {
-            name: "Twitter",
-            href: "/",
-            icon: <Twitter width="inherit" />,
+            href: "https://www.linkedin.com/company/mediamorphosis-inc/",
+            icon: <Linkedin width="inherit" />,
         },
     ];
 
@@ -98,7 +95,12 @@ const Footer = () => {
                 />
                 <Flex>
                     {socials.map((social, i) => (
-                        <Link key={i} href={social.href}>
+                        <Link
+                            key={i}
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener"
+                        >
                             <Button
                                 mx={{ base: "3px", sm: 2 }}
                                 borderRadius="50%"
