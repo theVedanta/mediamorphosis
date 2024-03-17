@@ -52,10 +52,11 @@ export default function Home() {
                                 width: "100%",
                                 height: "100%",
                             }}
-                            autoPlay
+                            autoPlay={true}
+                            muted
                             preload="auto"
                         >
-                            <source src="/assets/hero.mp4" type="video/mp4" />
+                            <source src="/assets/hero.webm" type="video/webm" />
                         </video>
 
                         <Box
@@ -190,7 +191,7 @@ export default function Home() {
                     mt={{ base: 14, sm: 20 }}
                 >
                     <video
-                        autoPlay
+                        autoPlay={true}
                         preload="auto"
                         style={{
                             position: "absolute",
@@ -202,8 +203,9 @@ export default function Home() {
                             height: "100%",
                             objectFit: "cover",
                         }}
+                        muted
                     >
-                        <source src="/assets/human.mp4" type="video/mp4" />
+                        <source src="/assets/human.webm" type="video/webm" />
                     </video>
 
                     <SlimHeading
@@ -243,7 +245,7 @@ export default function Home() {
 
                     <Box
                         w="100%"
-                        h={{ base: "60vh", sm: "100vh" }}
+                        h={{ base: "65vh", sm: "110vh" }}
                         overflow="hidden"
                     >
                         <Box
@@ -326,6 +328,7 @@ export default function Home() {
                                     width={200}
                                     height={100}
                                     loading="lazy"
+                                    style={{ objectFit: "cover" }}
                                 />
                             ))}
                         </Flex>
