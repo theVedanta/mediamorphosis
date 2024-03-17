@@ -10,8 +10,19 @@ import craft from "../public/assets/craft.svg";
 import harness from "../public/assets/harness.svg";
 import Carousel from "@/components/Carousel";
 import SlimHeading from "@/components/SlimHeading";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+    const vidRef1 = useRef(null);
+    const vidRef2 = useRef(null);
+
+    useEffect(() => {
+        if (vidRef1.current && vidRef2.current) {
+            (vidRef1.current as HTMLVideoElement).play();
+            (vidRef2.current as HTMLVideoElement).play();
+        }
+    }, []);
+
     return (
         <>
             <Head>
@@ -55,6 +66,8 @@ export default function Home() {
                             autoPlay={true}
                             muted
                             preload="auto"
+                            ref={vidRef1}
+                            loop={true}
                         >
                             <source src="/assets/hero.webm" type="video/webm" />
                         </video>
@@ -204,6 +217,8 @@ export default function Home() {
                             objectFit: "cover",
                         }}
                         muted
+                        ref={vidRef2}
+                        loop={true}
                     >
                         <source src="/assets/human.webm" type="video/webm" />
                     </video>
