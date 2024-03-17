@@ -9,7 +9,7 @@ main,
 body,
 #__next {
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .carousel .swiper-wrapper {
     transition-timing-function: linear;
