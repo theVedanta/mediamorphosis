@@ -73,23 +73,22 @@ export default function Home() {
                         </video>
 
                         <Box
-                            pl={{ base: 4, sm: 8 }}
-                            pt={{ base: 4, sm: 8 }}
+                            pl={{ base: 3, sm: 8 }}
+                            pt={{ base: 3, sm: 8 }}
                             bg="black"
                             position="absolute"
                             bottom={0}
                             right={0}
-                            w={{ base: "72vw", sm: "40vw" }}
+                            w={{ base: "80vw", sm: "40vw" }}
                             borderRadius="20px 0 0 0"
                         >
                             <Box
                                 bg="gray"
-                                p={{ base: 4, sm: 8 }}
+                                p={{ base: 3, sm: 8 }}
                                 borderRadius="20px 0 0 20px"
                             >
                                 <Text
-                                    fontSize={{ base: "0.7rem", sm: "large" }}
-                                    textAlign="justify"
+                                    fontSize={{ base: "0.9rem", sm: "large" }}
                                 >
                                     A Full-Service Technology Powerhouse in NYC
                                     with a Rich Advertising Heritage.
@@ -107,12 +106,12 @@ export default function Home() {
                         </Box>
 
                         <Box h="100%" mt={{ base: 10, sm: 0 }}>
-                            <SlimHeading fontWeight={500}>
+                            <SlimHeading fontWeight={600}>
                                 <Italic>Digital Innovation&nbsp;</Italic>
-                                at the crossroads of cultures.
+                                at the Crossroads Of Cultures.
                             </SlimHeading>
                             <Text
-                                fontSize={{ base: "sm", sm: "xl" }}
+                                fontSize={{ base: "0.9rem", sm: "large" }}
                                 mt={{ base: 3, sm: 6 }}
                                 w={{ base: "100%", sm: "36%" }}
                             >
@@ -254,7 +253,7 @@ export default function Home() {
                     <SlimHeading>
                         We build products for a global audience
                     </SlimHeading>
-                    <Text fontSize={20} mt={10}>
+                    <Text fontSize={{ base: 16, sm: 20 }} mt={10}>
                         Embracing Diversity: Connecting with Cultures Across the
                         Globe
                     </Text>
@@ -332,7 +331,7 @@ export default function Home() {
                             alignItems="center"
                             justifyContent="center"
                             wrap="wrap"
-                            gap={20}
+                            gap={{ base: 10, sm: 20 }}
                         >
                             {[1, 2, 3, 4, 5].map((i) => (
                                 <Image

@@ -41,8 +41,8 @@ const theme = extendTheme({
     styles: {
         global: {
             body: {
-                bg: "black",
-                color: "white",
+                bg: "#000000",
+                color: "#ffffff",
             },
         },
     },

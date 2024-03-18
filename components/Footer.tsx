@@ -83,7 +83,7 @@ const Footer = () => {
             backgroundImage="/assets/footer.svg"
             backgroundRepeat="none"
             backgroundSize="cover"
-            h="54vh"
+            h={{ base: "70vh", sm: "54vh" }}
         >
             <Box className="footer-social" w="50%" position="relative">
                 <Image
@@ -123,7 +123,7 @@ const Footer = () => {
                     position="absolute"
                     bottom={0}
                     left={0}
-                    fontSize={{ base: 12, sm: 20 }}
+                    fontSize={{ base: 16, sm: 20 }}
                     w={{ base: "200%", sm: "100%" }}
                     textAlign={{ base: "center", sm: "left" }}
                 >
@@ -144,7 +144,7 @@ const Footer = () => {
                     {linkBox1.map((link) => (
                         <Link href={link.href} key={link.name}>
                             <Text
-                                fontSize={{ base: 14, sm: 22 }}
+                                fontSize={{ base: 17, sm: 22 }}
                                 lineHeight={1.6}
                             >
                                 {link.name}
@@ -156,7 +156,7 @@ const Footer = () => {
                     {linkBox2.map((link) => (
                         <Link href={link.href} key={link.name}>
                             <Text
-                                fontSize={{ base: 14, sm: 22 }}
+                                fontSize={{ base: 17, sm: 22 }}
                                 lineHeight={1.6}
                             >
                                 {link.name}
@@ -168,7 +168,7 @@ const Footer = () => {
                     {linkBox3.map((link) => (
                         <Link href={link.href} key={link.name}>
                             <Text
-                                fontSize={{ base: 14, sm: 22 }}
+                                fontSize={{ base: 17, sm: 22 }}
                                 lineHeight={1.6}
                             >
                                 {link.name}

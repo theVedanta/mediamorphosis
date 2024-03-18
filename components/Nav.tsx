@@ -63,7 +63,12 @@ const Nav = () => {
                     <DrawerContent bg="black">
                         <DrawerCloseButton color="white" />
 
-                        <DrawerBody>
+                        <DrawerBody
+                            display="flex"
+                            flexDirection="column"
+                            justifyContent="center"
+                            alignItems="center"
+                        >
                             <Links mb={10} />
                         </DrawerBody>
                     </DrawerContent>

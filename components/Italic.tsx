@@ -11,10 +11,13 @@ const Italic = ({ children }: { children: ReactNode }) => {
             fontSize={{ base: "2.2rem", sm: "5rem" }}
             fontWeight={300}
             noOfLines={1}
-            style={{ display: "inline !important" }}
+            style={{
+                display: "inline !important",
+                letterSpacing: "-10px !important",
+            }}
         >
             <i style={{ display: "inline !important" }}>{children}</i>
         </Text>
     );
-};
+}
 export default Italic;

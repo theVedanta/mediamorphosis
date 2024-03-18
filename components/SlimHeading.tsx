@@ -11,11 +11,11 @@ const SlimHeading: React.FC<CustomComponentProps & HeadingProps> = ({
 }) => {
     return (
         <Heading
-            w={{ base: "95%", sm: "70%" }}
+            w={{ base: "95%", sm: "75%" }}
             fontWeight={{ base: 300, sm: 400 }}
-            fontSize={{ base: "3xl", sm: "6xl" }}
-            lineHeight={1.1}
-            letterSpacing={{ base: "-2px", sm: "-2.6px" }}
+            fontSize={{ base: "3xl", sm: "7xl" }}
+            lineHeight={1}
+            letterSpacing={{ base: "-2px", sm: "-2px" }}
             {...props}
         >
             {children}
