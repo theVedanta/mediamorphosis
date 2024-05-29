@@ -1,0 +1,113 @@
+.container {
+    padding: 0 4rem;
+}
+@font-face {
+    font-family: "PP Neue Montreal";
+    src: url("../public/assets/fonts/body/PPNeueMontreal-Bold.otf");
+}
+@font-face {
+    font-family: "PP Neue Montreal";
+    src: url("../public/assets/fonts/body/PPNeueMontreal-Book.otf");
+}
+@font-face {
+    font-family: "PP Neue Editorial";
+    font-style: italic;
+    src: url("../public/assets/fonts/italic/PPEditorialNew-Italic.otf");
+}
+@font-face {
+    font-family: "PP Neue Montreal";
+    src: url("../public/assets/fonts/body/PPNeueMontreal-Thin.otf");
+}
+@font-face {
+    font-family: "PP Neue Montreal";
+    src: url("../public/assets/fonts/body/PPNeueMontreal-Medium.otf");
+}
+
+* {
+    outline: none;
+    letter-spacing: -0.2px;
+}
+main,
+body,
+#__next {
+    width: 100vw;
+    overflow-x: hidden;
+}
+.carousel .swiper-wrapper {
+    transition-timing-function: linear;
+}
+input,
+textarea {
+    background-color: #e3e3e3 !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+input::placeholder,
+textarea::placeholder {
+    font-weight: 400 !important;
+}
+img,
+video {
+    object-fit: cover;
+}
+
+.chakra-ui-dark input,
+.chakra-ui-dark textarea {
+    background-color: #191919 !important;
+    color: #fff !important;
+}
+.chakra-ui-dark input::placeholder,
+.chakra-ui-dark textarea::placeholder {
+    color: #fff !important;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 1rem 0;
+    padding: 0 5rem;
+}
+.content p {
+    margin-bottom: 1.6rem;
+    padding: 0 5rem;
+    font-size: 1.4rem;
+}
+.content a {
+    color: #fb3b3b;
+    text-decoration: underline;
+}
+.italic {
+    display: inline !important;
+}
+.craft-image {
+    transform: translateY(200px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.6rem;
+    }
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6 {
+        font-size: 1.6rem;
+        padding: 0;
+    }
+
+    .content p {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .craft-image {
+        transform: translateY(50px);
+    }
+}
