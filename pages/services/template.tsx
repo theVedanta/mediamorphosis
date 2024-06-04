@@ -39,7 +39,7 @@ const Services = () => {
       </Box> */}
 
       <Box
-        py={"10em"}
+        py={['5em','5em',"10em"]}
         px={{ base: 8, lg: 16, "2xl": 24 }}
         backgroundImage={"/assets/banner.png"}
         bgRepeat={"no-repeat"}
@@ -48,13 +48,13 @@ const Services = () => {
       >
         <Box w={["100%", "100%", "60%"]}>
           {/* <Image objectFit={"cover"} src="/assets/banner.png" alt="banner" /> */}
-          <Text color={"white"} fontWeight={500} fontSize={80}>
+          <Text color={"white"} fontWeight={500} fontSize={[40, 40, 80]}>
             Web Development
           </Text>
           <Text
             color={"white"}
             fontFamily={"PP Neue Montreal Book"}
-            fontSize={40}
+            fontSize={[28, 28, 40]}
           >
             Craft an App That Puts Your Business in Everyone&apos;s Pocket.
           </Text>
