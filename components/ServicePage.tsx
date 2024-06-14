@@ -1,45 +1,41 @@
 import Consultation from "@/components/Consultation";
-import Italic from "@/components/Italic";
 import SlimHeading from "@/components/SlimHeading";
-import { cards } from "@/content";
 import {
-  As,
   Box,
   Flex,
   Grid,
   GridItem,
-  Heading,
-  Icon,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
   Text,
   useColorMode,
-  useDisclosure,
   Image,
-  Divider,
 } from "@chakra-ui/react";
 import Head from "next/head";
 
-const Services = () => {
+type NonEmptyArray<T> = [T, ...T[]];
+
+const ServicePage = ({
+  title,
+  description,
+  services,
+  image,
+}: {
+  title: string;
+  description: string;
+  services: NonEmptyArray<{ name: string; description: string }>;
+  image: string;
+}) => {
+  function formatNum(num: number): string {
+    return num.toString().padStart(2, "0");
+  }
+
   return (
     <>
       <Head>
-        <title>MediaMorphosis - Services</title>
+        <title>MediaMorphosis - {title}</title>
       </Head>
 
-      {/* <Box mt={{ base: 10, lg: 16, "2xl": 20 }}>
-        <SlimHeading w="100%" textAlign="center">
-          Digital Solutions Tailored for&nbsp;
-          <Italic>Impact</Italic>
-        </SlimHeading>
-      </Box> */}
-
       <Box
-        py={['5em','5em',"10em"]}
+        py={["5em", "5em", "10em"]}
         px={{ base: 8, lg: 16, "2xl": 24 }}
         backgroundImage={"/assets/banner.png"}
         bgRepeat={"no-repeat"}
@@ -47,16 +43,15 @@ const Services = () => {
         backgroundSize={"cover"}
       >
         <Box w={["100%", "100%", "60%"]}>
-          {/* <Image objectFit={"cover"} src="/assets/banner.png" alt="banner" /> */}
           <Text color={"white"} fontWeight={500} fontSize={[40, 40, 80]}>
-            Web Development
+            {title}
           </Text>
           <Text
             color={"white"}
             fontFamily={"PP Neue Montreal Book"}
             fontSize={[28, 28, 40]}
           >
-            Craft an App That Puts Your Business in Everyone&apos;s Pocket.
+            {description}
           </Text>
         </Box>
       </Box>
@@ -75,27 +70,36 @@ const Services = () => {
           pb={{ base: 10, lg: 4, "2xl": 0 }}
           mb={10}
         >
-          {/* {cards.map((card) => (
-            <ServiceCard key={card[0]} card={card} />
-          ))} */}
           <GridItem w={["100%", "100%", "75%"]}>
-            <TextCard />
+            <TextCard
+              index={formatNum(1)}
+              title={services[0].name}
+              description={services[0].description}
+            />
           </GridItem>
           <GridItem w={["100%", "100%", "75%"]}>
-            <Image src="/assets/services/phone.png" alt="Phone" />
-          </GridItem>{" "}
-          <GridItem w={["100%", "100%", "75%"]}>
-            <TextCard />
-          </GridItem>{" "}
-          <GridItem w={["100%", "100%", "75%"]}>
-            <TextCard />
+            <br />
+            <Image src={image} alt="Phone" />
           </GridItem>
+          {services.slice(1).map((s, i) => {
+            return (
+              <>
+                <GridItem w={["100%", "100%", "75%"]}>
+                  <TextCard
+                    title={s.name}
+                    description={s.description}
+                    index={formatNum(i + 2)}
+                  />
+                </GridItem>
+              </>
+            );
+          })}
         </Grid>
       </Box>
 
       <Consultation />
 
-      <Box mt={{ base: 10, lg: 10, "2xl": 10 }}>
+      {/* <Box mt={{ base: 10, lg: 10, "2xl": 10 }}>
         <Divider mx={{ base: 23, lg: 31, "2xl": 39 }} />
         <br />
         <br />
@@ -116,9 +120,6 @@ const Services = () => {
           pb={{ base: 10, lg: 4, "2xl": 0 }}
           mb={10}
         >
-          {/* {cards.map((card) => (
-            <ServiceCard key={card[0]} card={card} />
-          ))} */}
           <GridItem>
             <OtherSolution />
           </GridItem>
@@ -126,12 +127,20 @@ const Services = () => {
             <OtherSolution />
           </GridItem>
         </Grid>
-      </Box>
+      </Box> */}
     </>
   );
 };
 
-const TextCard = () => {
+const TextCard = ({
+  title,
+  description,
+  index,
+}: {
+  title: string;
+  description: string;
+  index: string;
+}) => {
   return (
     <Box position={"relative"}>
       <Text
@@ -143,19 +152,13 @@ const TextCard = () => {
         color={"#FB3B3B33"}
         top={"-80px"}
       >
-        01
+        {index}
       </Text>
       <Box marginTop={100} marginLeft={[5, 5, 20]}>
         <Text mb={2.5} fontWeight={500} fontSize={"30px"}>
-          FlowNote: SaaS tool for Web Design
+          {title}
         </Text>
-        <Text>
-          Our app development service turns your ideas into intuitive,
-          user-friendly mobile applications that stand out in crowded
-          marketplaces. Whether it&apos;s for iOS, Android, or cross-platform
-          solutions, we focus on creating apps that offer engaging user
-          experiences, seamless functionality, and real-time performance
-        </Text>
+        <Text>{description}</Text>
       </Box>
     </Box>
   );
@@ -198,4 +201,4 @@ const OtherSolution = () => {
   );
 };
 
-export default Services;
+export default ServicePage;
