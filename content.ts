@@ -73,7 +73,7 @@ const cards: [string, As, string, string, string][] = [
   [
     "AI Integration",
     Cpu,
-    `Designing Experiences That Delight and Engage.`,
+    `Harness the power of artificial intelligence.`,
     `Our AI integration service brings the power of artificial intelligence to your business. We help you leverage AI technologies such as machine learning, natural language processing, and computer vision to create intelligent applications and automate tasks. Whether it's chatbots for customer support, predictive analytics for business insights, or AI-driven automation, we design and implement solutions that enhance your operations. With our AI integration, you can transform the way you interact with customers, make decisions, and manage resources, leading to improved efficiency and innovation.`,
     "/ai-integration",
   ],
