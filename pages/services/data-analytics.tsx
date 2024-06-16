@@ -36,6 +36,7 @@ const DataAnalytics = () => {
           },
         ]}
         image={"/assets/services/template/data-analytics.png"}
+        banner={"/assets/services/template/data-analytics-banner.png"}
       />
     </>
   );

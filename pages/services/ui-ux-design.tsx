@@ -34,6 +34,7 @@ const UIUXDevelopment = () => {
           },
         ]}
         image={"/assets/services/template/uiux.png"}
+        banner={"/assets/services/template/ui-banner.png"}
       />
     </>
   );

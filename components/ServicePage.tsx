@@ -18,11 +18,13 @@ const ServicePage = ({
   description,
   services,
   image,
+  banner,
 }: {
   title: string;
   description: string;
   services: NonEmptyArray<{ name: string; description: string }>;
   image: string;
+  banner?: string;
 }) => {
   function formatNum(num: number): string {
     return num.toString().padStart(2, "0");
@@ -37,7 +39,7 @@ const ServicePage = ({
       <Box
         py={["5em", "5em", "10em"]}
         px={{ base: 8, lg: 16, "2xl": 24 }}
-        backgroundImage={"/assets/banner.png"}
+        backgroundImage={banner || "/assets/banner.png"}
         bgRepeat={"no-repeat"}
         backgroundPosition={"center"}
         backgroundSize={"cover"}
@@ -56,7 +58,7 @@ const ServicePage = ({
         </Box>
       </Box>
 
-      <Box mt={{ base: 10, lg: 16, "2xl": 20 }}>
+      <Box ml={[0, 0, 20]} mt={{ base: 10, lg: 16, "2xl": 20 }}>
         <Grid
           px={{ base: 8, lg: 16, "2xl": 24 }}
           templateColumns={{
@@ -84,7 +86,7 @@ const ServicePage = ({
           {services.slice(1).map((s, i) => {
             return (
               <>
-                <GridItem w={["100%", "100%", "75%"]}>
+                <GridItem key={i} w={["100%", "100%", "75%"]}>
                   <TextCard
                     title={s.name}
                     description={s.description}

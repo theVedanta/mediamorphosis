@@ -34,6 +34,7 @@ const MessagingServices = () => {
           },
         ]}
         image={"/assets/services/template/messaging.png"}
+        banner={"/assets/services/template/messaging-banner.png"}
       />
     </>
   );

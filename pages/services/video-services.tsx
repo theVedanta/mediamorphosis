@@ -34,6 +34,7 @@ const VideoServices = () => {
           },
         ]}
         image={"/assets/services/template/videoservices.png"}
+        banner={"/assets/services/template/video-banner.png"}
       />
     </>
   );

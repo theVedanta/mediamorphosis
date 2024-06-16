@@ -34,6 +34,7 @@ const Email = () => {
           },
         ]}
         image={"/assets/services/template/email.png"}
+        banner={"/assets/services/template/email-banner.png"}
       />
     </>
   );

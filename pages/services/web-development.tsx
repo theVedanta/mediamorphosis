@@ -34,6 +34,7 @@ const WebDevelopment = () => {
           },
         ]}
         image={"/assets/services/template/webd.png"}
+        banner={"/assets/services/template/webd-banner.png"}
       />
     </>
   );

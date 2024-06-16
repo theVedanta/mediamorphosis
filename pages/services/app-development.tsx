@@ -36,6 +36,7 @@ const AppDevelopment = () => {
           },
         ]}
         image={"/assets/services/template/appdev.png"}
+        banner={"/assets/services/template/app-banner.png"}
       />
     </>
   );

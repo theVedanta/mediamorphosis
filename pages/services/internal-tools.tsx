@@ -34,6 +34,7 @@ const InternalTools = () => {
           },
         ]}
         image={"/assets/services/template/internal-tools.png"}
+        banner={"/assets/services/template/internal-tools-banner.png"}
       />
     </>
   );
