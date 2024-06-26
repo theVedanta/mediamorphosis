@@ -7,7 +7,7 @@ const description =
     "A Full-Service Technology Powerhouse in NYC with a Rich Advertising Heritage. Specializing in crafting innovative software and digital solutions, we excel at driving consumer engagement through cutting-edge technology. Our expertise in seamless integration of advertising strategies with technology-driven campaigns propels business growth, optimizing for scalability and cost efficiency while engaging audiences in meaningful ways.";
 
 const SEO: NextSeoProps = {
-    title: "MediaMorphosis",
+    title: "Digital Marketing Agency NYC",
     description: description,
     openGraph: {
         title,
