@@ -4,7 +4,7 @@ const WebDevelopment = () => {
   return (
     <>
       <ServicePage
-        title="Web Development"
+        title="Web Development agency"
         description={"Bring Your Online Space to Life with a Stunning Website."}
         services={[
           {
