@@ -1,6 +1,6 @@
 import { NextSeoProps } from "next-seo";
 
-const title = "MediaMorphosis";
+const title = "Digital Marketing Agency NYC";
 const url = "https://digital.mediamorphosisinc.com";
 const embedImage = `${url}/assets/embed-image.png`;
 const description =
